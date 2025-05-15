@@ -1,543 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FINSA | Solana</title>
 
-    <link
-      rel="shortcut icon"
-      href="./assets/img/logo.svg"
-      type="image/x-icon"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FINSA | Solana</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
-  <body class="bg-black flex justify-center flex-col items-center">
-    <div
-      class="flex py-[9px] px-4 items-center justify-center w-full bg-purple-primary"
-    >
-      <div
-        class="flex border border-white rounded-[100px] py-2.5 px-4 bg-white/60 w-full max-w-[445px]"
-      >
-        <span
-          class="text-black text-center leading-[110%] tracking-[-0.04em] text-sm lg:text-base"
-          >Wallet analysis is free, secure, and completes in under a
-          minute.</span
-        >
-      </div>
+  <link rel="shortcut icon" href="./assets/img/logo.svg" type="image/x-icon" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body class="bg-black flex justify-center flex-col items-center">
+  <div class="flex py-[9px] px-4 items-center justify-center w-full bg-purple-primary">
+    <div class="flex border border-white rounded-[100px] py-2.5 px-4 bg-white/60 w-full max-w-[448px]">
+      <span class="text-black text-center leading-[110%] tracking-[-0.04em] text-sm lg:text-base">Wallet analysis is
+        free, secure, and completes in under a
+        minute.</span>
     </div>
-    <div class="container max-w-360 p-3 2xl:p-0">
-      <header class="mt-8 flex items-center justify-between">
-        <div class="flex items-center justify-center gap-3">
+  </div>
+  <div class="container max-w-360 p-3 2xl:p-0">
+    <header class="mt-8 flex items-center justify-between">
+      <div class="flex items-center justify-center gap-3">
+        <img src="./assets/img/logo.svg" alt="" />
+        <span class="text-white text-xl leading-[110%] tracking-[-0.04em] font-medium">
+          Finsa
+        </span>
+      </div>
+      <ul class="flex items-center gap-6 py-3 px-4.5 border rounded-[100px] bg-gray-06 border-white/24 hidden lg:flex">
+        <li>
+          <a class="text-white/70 text-base hover:text-white/90 transition-colors duration-300 ease-in-out"
+            href="#video">Video</a>
+        </li>
+        <li>
+          <a class="text-white/70 text-base hover:text-white/90 transition-colors duration-300 ease-in-out"
+            href="">Features</a>
+        </li>
+        <li>
+          <a class="text-white/70 text-base hover:text-white/90 transition-colors duration-300 ease-in-out" href="">How
+            it works</a>
+        </li>
+        <li>
+          <a class="text-white/70 text-base hover:text-white/90 transition-colors duration-300 ease-in-out"
+            href="">Audience</a>
+        </li>
+        <li>
+          <a class="text-white/70 text-base hover:text-white/90 transition-colors duration-300 ease-in-out"
+            href="">Reviews</a>
+        </li>
+        <li>
+          <a class="text-white/70 text-base hover:text-white/90 transition-colors duration-300 ease-in-out"
+            href="">Roadmap</a>
+        </li>
+        <li>
+          <a class="text-white/70 text-base hover:text-white/90 transition-colors duration-300 ease-in-out"
+            href="">FAQ</a>
+        </li>
+      </ul>
+      <button
+        class="py-[14px] px-4 items-center gap-1.5 bg-linear-to-b from-purple-93 to-purple-5c customBorder rounded-xl hidden lg:flex cursor-pointer">
+        <img src="./assets/img/connect.svg" alt="" />
+        <span class="text-white font-medium text-lg tracking-[-0.02em]">
+          Join us on X
+        </span>
+      </button>
+      <button id="mobileMenu" class="flex gap-4 p-1 border border-white/40 rounded-[6px] lg:hidden">
+        <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 6H20M4 12H20M4 18H20" stroke="rgba(255, 255, 255, 0.32)" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </button>
+      <div id="mobileMenuContent"
+        class="flex flex-col gap-6 p-6 justify-start bg-gray-06 fixed right-[-100%] top-0 overflow-y-hidden transition-all duration-300 ease-in-out z-50 w-[300px] h-full">
+        <div class="flex items-center gap-3">
           <img src="./assets/img/logo.svg" alt="" />
-          <span
-            class="text-white text-xl leading-[110%] tracking-[-0.04em] font-medium"
-          >
+          <span class="text-white text-xl leading-[110%] tracking-[-0.04em] font-medium">
             Finsa
           </span>
         </div>
-        <ul
-          class="flex items-center gap-6 py-3 px-4.5 border rounded-[100px] bg-gray-06 border-white/24 hidden lg:flex"
-        >
+        <div id="mobileMenuClose" class="absolute top-7 right-7">
+          <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="Menu / Close_MD">
+              <path id="Vector" d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="rgba(255, 255, 255, 0.32)"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+          </svg>
+        </div>
+        <ul id="headerListMobile" class="flex flex-col gap-2">
           <li>
-            <a
-              class="text-white/70 text-base hover:text-white/90 transition-colors duration-300 ease-in-out"
-              href="#video"
-              >Video</a
-            >
+            <a class="text-white/70 text-lg hover:text-white/90 transition-colors duration-300 ease-in-out"
+              href="#video">Video</a>
           </li>
           <li>
-            <a
-              class="text-white/70 text-base hover:text-white/90 transition-colors duration-300 ease-in-out"
-              href=""
-              >Features</a
-            >
+            <a class="text-white/70 text-lg hover:text-white/90 transition-colors duration-300 ease-in-out"
+              href="">Features</a>
           </li>
           <li>
-            <a
-              class="text-white/70 text-base hover:text-white/90 transition-colors duration-300 ease-in-out"
-              href=""
-              >How it works</a
-            >
+            <a class="text-white/70 text-lg hover:text-white/90 transition-colors duration-300 ease-in-out" href="">How
+              it works</a>
           </li>
           <li>
-            <a
-              class="text-white/70 text-base hover:text-white/90 transition-colors duration-300 ease-in-out"
-              href=""
-              >Audience</a
-            >
+            <a class="text-white/70 text-lg hover:text-white/90 transition-colors duration-300 ease-in-out"
+              href="">Audience</a>
           </li>
           <li>
-            <a
-              class="text-white/70 text-base hover:text-white/90 transition-colors duration-300 ease-in-out"
-              href=""
-              >Reviews</a
-            >
+            <a class="text-white/70 text-lg hover:text-white/90 transition-colors duration-300 ease-in-out"
+              href="">Reviews</a>
           </li>
           <li>
-            <a
-              class="text-white/70 text-base hover:text-white/90 transition-colors duration-300 ease-in-out"
-              href=""
-              >Roadmap</a
-            >
+            <a class="text-white/70 text-lg hover:text-white/90 transition-colors duration-300 ease-in-out"
+              href="">Roadmap</a>
           </li>
           <li>
-            <a
-              class="text-white/70 text-base hover:text-white/90 transition-colors duration-300 ease-in-out"
-              href=""
-              >FAQ</a
-            >
+            <a class="text-white/70 text-lg hover:text-white/90 transition-colors duration-300 ease-in-out"
+              href="">FAQ</a>
           </li>
         </ul>
         <button
-          class="py-[14px] px-4 items-center gap-1.5 bg-linear-to-b from-purple-93 to-purple-5c customBorder rounded-xl hidden lg:flex cursor-pointer"
-        >
+          class="py-[14px] px-4 flex items-center gap-1.5 bg-linear-to-b from-purple-93 to-purple-5c customBorder rounded-xl">
           <img src="./assets/img/connect.svg" alt="" />
           <span class="text-white font-medium text-lg tracking-[-0.02em]">
             Join us on X
           </span>
         </button>
-        <button
-          id="mobileMenu"
-          class="flex gap-4 p-1 border border-white/40 rounded-[6px] lg:hidden"
-        >
-          <svg
-            width="25px"
-            height="25px"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M4 6H20M4 12H20M4 18H20"
-              stroke="rgba(255, 255, 255, 0.32)"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </button>
-        <div
-          id="mobileMenuContent"
-          class="flex flex-col gap-6 p-6 justify-start bg-gray-06 fixed right-[-100%] top-0 overflow-y-hidden transition-all duration-300 ease-in-out z-50 w-[300px] h-full"
-        >
-          <div class="flex items-center gap-3">
-            <img src="./assets/img/logo.svg" alt="" />
-            <span
-              class="text-white text-xl leading-[110%] tracking-[-0.04em] font-medium"
-            >
-              Finsa
-            </span>
-          </div>
-          <div id="mobileMenuClose" class="absolute top-7 right-7">
-            <svg
-              width="25px"
-              height="25px"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g id="Menu / Close_MD">
-                <path
-                  id="Vector"
-                  d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18"
-                  stroke="rgba(255, 255, 255, 0.32)"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </g>
+      </div>
+    </header>
+    <section class="flex gap-5 xl:gap-19 mt-[85px] flex-col-reverse xl:flex-row">
+      <div class="flex flex-col w-full xl:max-w-[776px] gap-4">
+        <h1 class="text-5xl xl:text-[56px] text-white font-medium tracking-[-0.04em]">
+          Finsa is a
+          <div class="inline-flex max-w-14 max-h-14 p-3 rounded-[2px] bg-purple-primary">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16 13.3333L4 8L16 2.66667L28 8L16 13.3333ZM14.6667 16L4 10.6667V24L14.6667 29.3333V16ZM28 24V10.6667L17.3333 16V29.3333L28 24Z"
+                fill="url(#paint0_linear_1_35)" />
+              <defs>
+                <linearGradient id="paint0_linear_1_35" x1="16" y1="2.66667" x2="16" y2="29.3333"
+                  gradientUnits="userSpaceOnUse">
+                  <stop stop-color="white" />
+                  <stop offset="1" stop-color="white" stop-opacity="0.5" />
+                </linearGradient>
+              </defs>
             </svg>
           </div>
-          <ul id="headerListMobile" class="flex flex-col gap-2">
-            <li>
-              <a
-                class="text-white/70 text-lg hover:text-white/90 transition-colors duration-300 ease-in-out"
-                href="#video"
-                >Video</a
-              >
-            </li>
-            <li>
-              <a
-                class="text-white/70 text-lg hover:text-white/90 transition-colors duration-300 ease-in-out"
-                href=""
-                >Features</a
-              >
-            </li>
-            <li>
-              <a
-                class="text-white/70 text-lg hover:text-white/90 transition-colors duration-300 ease-in-out"
-                href=""
-                >How it works</a
-              >
-            </li>
-            <li>
-              <a
-                class="text-white/70 text-lg hover:text-white/90 transition-colors duration-300 ease-in-out"
-                href=""
-                >Audience</a
-              >
-            </li>
-            <li>
-              <a
-                class="text-white/70 text-lg hover:text-white/90 transition-colors duration-300 ease-in-out"
-                href=""
-                >Reviews</a
-              >
-            </li>
-            <li>
-              <a
-                class="text-white/70 text-lg hover:text-white/90 transition-colors duration-300 ease-in-out"
-                href=""
-                >Roadmap</a
-              >
-            </li>
-            <li>
-              <a
-                class="text-white/70 text-lg hover:text-white/90 transition-colors duration-300 ease-in-out"
-                href=""
-                >FAQ</a
-              >
-            </li>
-          </ul>
-          <button
-            class="py-[14px] px-4 flex items-center gap-1.5 bg-linear-to-b from-purple-93 to-purple-5c customBorder rounded-xl"
-          >
-            <img src="./assets/img/connect.svg" alt="" />
-            <span class="text-white font-medium text-lg tracking-[-0.02em]">
-              Join us on X
-            </span>
-          </button>
-        </div>
-      </header>
-      <section
-        class="flex gap-5 xl:gap-19 mt-[85px] flex-col-reverse xl:flex-row"
-      >
-        <div class="flex flex-col w-full xl:max-w-[776px] gap-4">
-          <h1
-            class="text-5xl xl:text-[56px] text-white font-medium tracking-[-0.04em]"
-          >
-            Finsa is a
-            <div
-              class="inline-flex max-w-14 max-h-14 p-3 rounded-[2px] bg-purple-primary"
-            >
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M16 13.3333L4 8L16 2.66667L28 8L16 13.3333ZM14.6667 16L4 10.6667V24L14.6667 29.3333V16ZM28 24V10.6667L17.3333 16V29.3333L28 24Z"
-                  fill="url(#paint0_linear_1_35)"
-                />
-                <defs>
-                  <linearGradient
-                    id="paint0_linear_1_35"
-                    x1="16"
-                    y1="2.66667"
-                    x2="16"
-                    y2="29.3333"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stop-color="white" />
-                    <stop offset="1" stop-color="white" stop-opacity="0.5" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-            decentralized instant microloan service
+          decentralized instant microloan service
 
-            <div
-              class="inline-flex max-w-14 max-h-14 p-3 rounded-[2px] bg-purple-primary"
-            >
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12.7229 13.5402C12.7229 14.373 12.9542 14.4964 13.4786 14.6814C13.8625 14.817 14.2651 14.5321 14.2651 14.125V12.8C14.2651 12.5445 14.0579 12.3374 13.8024 12.3374C13.2164 12.3374 12.7229 12.8771 12.7229 13.5402Z"
-                  fill="url(#paint0_linear_1_44)"
-                />
-                <path
-                  d="M16.5783 20.3579C16.5783 20.6134 16.7854 20.8205 17.041 20.8205C17.6424 20.8205 18.1205 20.2808 18.1205 19.6176C18.1205 18.7849 17.8892 18.6615 17.3648 18.4764C16.9809 18.3409 16.5783 18.6257 16.5783 19.0329V20.3579Z"
-                  fill="url(#paint1_linear_1_44)"
-                />
-                <path
-                  d="M27.1113 6.52337L23.9499 9.68482C23.7186 9.91614 23.4255 10.0241 23.1325 10.0241C22.8395 10.0241 22.5465 9.91614 22.3152 9.68482C21.868 9.23759 21.868 8.49735 22.3152 8.05012L25.4766 4.88867C22.7624 2.57542 19.2617 1.15663 15.4217 1.15663C6.90892 1.15663 0 8.06554 0 16.5783C0 25.0911 6.90892 32 15.4217 32C23.9345 32 30.8434 25.0911 30.8434 16.5783C30.8434 12.7383 29.4246 9.23759 27.1113 6.52337ZM18.1205 16.3007C19.1075 16.6554 20.4337 17.3648 20.4337 19.6318C20.4337 21.5595 18.907 23.148 17.041 23.148H16.9639C16.7509 23.148 16.5783 23.3206 16.5783 23.5335C16.5783 24.1658 16.054 24.6901 15.4217 24.6901C14.7894 24.6901 14.2651 24.1658 14.2651 23.5335V23.2713C14.2651 23.2032 14.2098 23.148 14.1417 23.148C12.0906 23.148 10.4096 21.4207 10.4096 19.2925C10.4096 18.6448 10.934 18.1205 11.5663 18.1205C12.1986 18.1205 12.7229 18.6448 12.7229 19.2771C12.7229 20.1253 13.3552 20.8193 14.1417 20.8193C14.2098 20.8193 14.2651 20.764 14.2651 20.6959V18.8166C14.2651 17.9655 13.7272 17.2074 12.9239 16.9263L12.7229 16.8559C11.7359 16.5012 10.4096 15.7918 10.4096 13.5248C10.4096 11.5971 11.9364 10.0087 13.8024 10.0087H13.8949C14.0994 10.0087 14.2651 9.84297 14.2651 9.63855C14.2651 9.00627 14.7894 8.48193 15.4217 8.48193C16.054 8.48193 16.5783 9.00627 16.5783 9.63855V9.90072C16.5783 9.96886 16.6335 10.0241 16.7017 10.0241C18.7528 10.0241 20.4337 11.7513 20.4337 13.8795C20.4337 14.5118 19.9094 15.0361 19.2771 15.0361C18.6448 15.0361 18.1205 14.5118 18.1205 13.8795C18.1205 13.0313 17.4882 12.3373 16.7017 12.3373C16.6335 12.3373 16.5783 12.3926 16.5783 12.4607V14.3401C16.5783 15.1911 17.1162 15.9492 17.9194 16.2304L18.1205 16.3007Z"
-                  fill="url(#paint2_linear_1_44)"
-                />
-                <path
-                  d="M31.9075 0.709398C31.7841 0.431807 31.5682 0.200482 31.2752 0.0771084C31.1364 0.0308433 30.9976 0 30.8434 0H24.6747C24.0424 0 23.5181 0.524337 23.5181 1.15663C23.5181 1.78892 24.0424 2.31325 24.6747 2.31325C25.921 2.31325 26.5452 3.82012 25.6639 4.7014L25.4766 4.88867C26.0627 5.39759 26.6024 5.93735 27.1113 6.52337L27.2986 6.3361C28.1799 5.45481 29.6867 6.07898 29.6867 7.3253C29.6867 7.95759 30.2111 8.48193 30.8434 8.48193C31.4757 8.48193 32 7.95759 32 7.3253V1.15663C32 1.00241 31.9692 0.863614 31.9075 0.709398Z"
-                  fill="url(#paint3_linear_1_44)"
-                />
-                <defs>
-                  <linearGradient
-                    id="paint0_linear_1_44"
-                    x1="16"
-                    y1="0"
-                    x2="16"
-                    y2="32"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stop-color="white" />
-                    <stop offset="1" stop-color="white" stop-opacity="0.5" />
-                  </linearGradient>
-                  <linearGradient
-                    id="paint1_linear_1_44"
-                    x1="16"
-                    y1="0"
-                    x2="16"
-                    y2="32"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stop-color="white" />
-                    <stop offset="1" stop-color="white" stop-opacity="0.5" />
-                  </linearGradient>
-                  <linearGradient
-                    id="paint2_linear_1_44"
-                    x1="16"
-                    y1="0"
-                    x2="16"
-                    y2="32"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stop-color="white" />
-                    <stop offset="1" stop-color="white" stop-opacity="0.5" />
-                  </linearGradient>
-                  <linearGradient
-                    id="paint3_linear_1_44"
-                    x1="16"
-                    y1="0"
-                    x2="16"
-                    y2="32"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stop-color="white" />
-                    <stop offset="1" stop-color="white" stop-opacity="0.5" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-            built on the Solana blockchain.
-          </h1>
-          <span class="text-lg leading-[150%] tracking-[-0.04em] text-white/50">
-            It leverages AI to analyze users’ wallet activity and instantly
-            determine an eligible loan amount in SOL. The user receives the loan
-            in one click - with no forms, manual checks, or KYC.
+          <div class="inline-flex max-w-14 max-h-14 p-3 rounded-[2px] bg-purple-primary">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12.7229 13.5402C12.7229 14.373 12.9542 14.4964 13.4786 14.6814C13.8625 14.817 14.2651 14.5321 14.2651 14.125V12.8C14.2651 12.5445 14.0579 12.3374 13.8024 12.3374C13.2164 12.3374 12.7229 12.8771 12.7229 13.5402Z"
+                fill="url(#paint0_linear_1_44)" />
+              <path
+                d="M16.5783 20.3579C16.5783 20.6134 16.7854 20.8205 17.041 20.8205C17.6424 20.8205 18.1205 20.2808 18.1205 19.6176C18.1205 18.7849 17.8892 18.6615 17.3648 18.4764C16.9809 18.3409 16.5783 18.6257 16.5783 19.0329V20.3579Z"
+                fill="url(#paint1_linear_1_44)" />
+              <path
+                d="M27.1113 6.52337L23.9499 9.68482C23.7186 9.91614 23.4255 10.0241 23.1325 10.0241C22.8395 10.0241 22.5465 9.91614 22.3152 9.68482C21.868 9.23759 21.868 8.49735 22.3152 8.05012L25.4766 4.88867C22.7624 2.57542 19.2617 1.15663 15.4217 1.15663C6.90892 1.15663 0 8.06554 0 16.5783C0 25.0911 6.90892 32 15.4217 32C23.9345 32 30.8434 25.0911 30.8434 16.5783C30.8434 12.7383 29.4246 9.23759 27.1113 6.52337ZM18.1205 16.3007C19.1075 16.6554 20.4337 17.3648 20.4337 19.6318C20.4337 21.5595 18.907 23.148 17.041 23.148H16.9639C16.7509 23.148 16.5783 23.3206 16.5783 23.5335C16.5783 24.1658 16.054 24.6901 15.4217 24.6901C14.7894 24.6901 14.2651 24.1658 14.2651 23.5335V23.2713C14.2651 23.2032 14.2098 23.148 14.1417 23.148C12.0906 23.148 10.4096 21.4207 10.4096 19.2925C10.4096 18.6448 10.934 18.1205 11.5663 18.1205C12.1986 18.1205 12.7229 18.6448 12.7229 19.2771C12.7229 20.1253 13.3552 20.8193 14.1417 20.8193C14.2098 20.8193 14.2651 20.764 14.2651 20.6959V18.8166C14.2651 17.9655 13.7272 17.2074 12.9239 16.9263L12.7229 16.8559C11.7359 16.5012 10.4096 15.7918 10.4096 13.5248C10.4096 11.5971 11.9364 10.0087 13.8024 10.0087H13.8949C14.0994 10.0087 14.2651 9.84297 14.2651 9.63855C14.2651 9.00627 14.7894 8.48193 15.4217 8.48193C16.054 8.48193 16.5783 9.00627 16.5783 9.63855V9.90072C16.5783 9.96886 16.6335 10.0241 16.7017 10.0241C18.7528 10.0241 20.4337 11.7513 20.4337 13.8795C20.4337 14.5118 19.9094 15.0361 19.2771 15.0361C18.6448 15.0361 18.1205 14.5118 18.1205 13.8795C18.1205 13.0313 17.4882 12.3373 16.7017 12.3373C16.6335 12.3373 16.5783 12.3926 16.5783 12.4607V14.3401C16.5783 15.1911 17.1162 15.9492 17.9194 16.2304L18.1205 16.3007Z"
+                fill="url(#paint2_linear_1_44)" />
+              <path
+                d="M31.9075 0.709398C31.7841 0.431807 31.5682 0.200482 31.2752 0.0771084C31.1364 0.0308433 30.9976 0 30.8434 0H24.6747C24.0424 0 23.5181 0.524337 23.5181 1.15663C23.5181 1.78892 24.0424 2.31325 24.6747 2.31325C25.921 2.31325 26.5452 3.82012 25.6639 4.7014L25.4766 4.88867C26.0627 5.39759 26.6024 5.93735 27.1113 6.52337L27.2986 6.3361C28.1799 5.45481 29.6867 6.07898 29.6867 7.3253C29.6867 7.95759 30.2111 8.48193 30.8434 8.48193C31.4757 8.48193 32 7.95759 32 7.3253V1.15663C32 1.00241 31.9692 0.863614 31.9075 0.709398Z"
+                fill="url(#paint3_linear_1_44)" />
+              <defs>
+                <linearGradient id="paint0_linear_1_44" x1="16" y1="0" x2="16" y2="32" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="white" />
+                  <stop offset="1" stop-color="white" stop-opacity="0.5" />
+                </linearGradient>
+                <linearGradient id="paint1_linear_1_44" x1="16" y1="0" x2="16" y2="32" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="white" />
+                  <stop offset="1" stop-color="white" stop-opacity="0.5" />
+                </linearGradient>
+                <linearGradient id="paint2_linear_1_44" x1="16" y1="0" x2="16" y2="32" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="white" />
+                  <stop offset="1" stop-color="white" stop-opacity="0.5" />
+                </linearGradient>
+                <linearGradient id="paint3_linear_1_44" x1="16" y1="0" x2="16" y2="32" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="white" />
+                  <stop offset="1" stop-color="white" stop-opacity="0.5" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          built on the Solana blockchain.
+        </h1>
+        <span class="text-lg leading-[150%] tracking-[-0.04em] text-white/50">
+          It leverages AI to analyze users’ wallet activity and instantly
+          determine an eligible loan amount in SOL. The user receives the loan
+          in one click - with no forms, manual checks, or KYC.
+        </span>
+        <button
+          class="py-3.5 px-4 flex gap-1.5 border rounded-xl border-white w-fit bg-none hover:bg-white/20 transition-colors duration-300 ease-in-out cursor-pointer">
+          <img src="./assets/img/connect.svg" alt="" />
+          <span class="font-medium text-white text-lg tracking-[-0.02em]">
+            Join us on X
           </span>
-          <button
-            class="py-3.5 px-4 flex gap-1.5 border rounded-xl border-white w-fit bg-none hover:bg-white/20 transition-colors duration-300 ease-in-out cursor-pointer"
-          >
-            <img src="./assets/img/connect.svg" alt="" />
-            <span class="font-medium text-white text-lg tracking-[-0.02em]">
-              Join us on X
-            </span>
-          </button>
-        </div>
-        <div
-          class="flex w-full relative overflow-hidden bg-purple-primary rounded-3xl h-[344px] xl:h-auto"
-        >
-          <div
-            class="flex p-3 bg-white rounded-xl h-max items-center w-full max-w-[353px] perspective-distant"
-          >
-            <div class="flex gap-1.5 items-center">
-              <img
-                src="./assets/img/avatar_1.png"
-                class="rounded-[6px] w-[52px] h-max"
-                alt=""
-              />
-              <div class="flex flex-col gap-1">
-                <span
-                  class="text-black text-xl leading-[130%] tracking-[-0.04em] font-inter"
-                  >Wallet verified!</span
-                >
-                <p
-                  class="text-lg text-black/20 leading-[130%] tracking-[-0.04em] font-inter"
-                >
-                  FafEfzd...ozpo
-                </p>
-              </div>
+        </button>
+      </div>
+      <div class="flex w-full relative overflow-hidden bg-purple-primary rounded-3xl h-[344px] xl:h-auto">
+        <div class="flex p-3 bg-white rounded-xl h-max items-center w-full max-w-[353px] perspective-distant">
+          <div class="flex gap-1.5 items-center">
+            <img src="./assets/img/avatar_1.png" class="rounded-[6px] w-[52px] h-max" alt="" />
+            <div class="flex flex-col gap-1">
+              <span class="text-black text-xl leading-[130%] tracking-[-0.04em] font-inter">Wallet verified!</span>
+              <p class="text-lg text-black/20 leading-[130%] tracking-[-0.04em] font-inter">
+                FafEfzd...ozpo
+              </p>
             </div>
-            <div class="flex flex-col gap-1.5"></div>
           </div>
+          <div class="flex flex-col gap-1.5"></div>
         </div>
-      </section>
-      <section
-        id="video"
-        class="flex flex-col mt-13 items-center justify-center gap-8"
-      >
-        <span
-          class="text-[32px] text-white tracking-[-0.04em] leading-[110%] font-medium"
-        >
-          Video
-        </span>
+      </div>
+    </section>
+    <section id="video" class="flex flex-col mt-13 items-center justify-center gap-8">
+      <span class="text-[32px] text-white tracking-[-0.04em] leading-[110%] font-medium">
+        Video
+      </span>
 
-        <div class="flex max-w-5xl">
-          <video
-            class="border rounded-xl border-white/12 w-full"
-            autoplay
-            muted
-            loop
-            controls
-            src="./assets/video/video.mp4"
-          ></video>
+      <div class="flex max-w-5xl">
+        <video class="border rounded-xl border-white/12 w-full" autoplay muted loop controls
+          src="./assets/video/video.mp4"></video>
+      </div>
+    </section>
+    <section id="video" class="flex flex-col mt-13 items-center justify-center gap-8 pb-15.5">
+      <span class="text-[32px] text-white tracking-[-0.04em] leading-[110%] font-medium">
+        Features
+      </span>
+      <div class="flex justify-center gap-5 flex-wrap justify-center relative pt-[25px]">
+        <img src="./assets/img/featuresBg.png" class="absolute top-0 left-0 -z-10" alt="">
+        <div
+          class="flex relative px-13.5 pb-12 pt-71.5 overflow-hidden bg-gray-07 rounded-[16px] border border-white/12 max-w-[460px] z-0">
+          <img src="./assets/img/grid.png" class="absolute w-[978px] max-w-[978px] left-[-75%] top-[-90%] -z-30"
+            alt="" />
+
+          <img src="./assets/img/light.png" class="absolute w-[978px] max-w-[978px] left-[-80%] top-[-90%] -z-20"
+            alt="" />
+          <img src="./assets/img/features1.png" class="absolute top-0 left-[50%] transform-[translate(-50%)] -z-10"
+            alt="" />
+
+          <span class="text-white text-xl font-normal font-inter text-center leading-[130%] tracking-[-0.04em]">
+            Eligible users receive funds immediately upon wallet connection.
+          </span>
         </div>
-      </section>
-      <section
-        id="video"
-        class="flex flex-col mt-13 items-center justify-center gap-8"
-      >
-        <span
-          class="text-[32px] text-white tracking-[-0.04em] leading-[110%] font-medium"
-        >
-          Features
-        </span>
-        <div class="flex gap-5 flex-wrap justify-center relative">
-          <img src="./assets/img/featuresBg.png" class="absolute bottom-0 left-0 -z-10" alt="">
-          <div
-            class="flex relative px-13.5 pb-12 pt-71.5 overflow-hidden bg-gray-07 rounded-[16px] border border-white/12 max-w-[460px]"
-          >
-            <img
-              src="./assets/img/grid.png"
-              class="absolute w-[978px] max-w-[978px] left-[-75%] top-[-90%]"
-              alt=""
-            />
 
-            <img
-              src="./assets/img/light.png"
-              class="absolute w-[978px] max-w-[978px] left-[-80%] top-[-90%]"
-              alt=""
-            />
-            <img
-              src="./assets/img/features1.png"
-              class="absolute top-0 left-[50%] transform-[translate(-50%)]"
-              alt=""
-            />
-            <span
-              class="text-white text-xl font-normal font-inter text-center leading-[130%] tracking-[-0.04em]"
-            >
-              Eligible users receive funds immediately upon wallet connection.
-            </span>
-          </div>
+        <div
+          class="flex justify-center relative px-13.5 pb-12 pt-71.5 overflow-hidden bg-gray-07 rounded-[16px] border border-white/12 max-w-[460px] z-0">
+          <img src="./assets/img/grid.png"
+            class="absolute w-[978px] max-w-[978px] top-[-90%] right-[-98%] transform-[rotateZ(180deg)] -z-30" alt="" />
 
-          <div
-            class="flex relative px-13.5 pb-12 pt-71.5 overflow-hidden bg-gray-07 rounded-[16px] border border-white/12 max-w-[460px]"
-          >
-            <img
-              src="./assets/img/grid.png"
-              class="absolute w-[978px] max-w-[978px] left-[-75%] top-[-90%]"
-              alt=""
-            />
+          <img src="./assets/img/light.png"
+            class="absolute w-[978px] max-w-[978px] top-[-90%] right-[-98%] transform-[rotateZ(180deg)] -z-20" alt="" />
+          <img src="./assets/img/features2.png" class="absolute top-[59px] left-[50%] transform-[translate(-50%)] -z-10"
+            alt="" />
 
-            <img
-              src="./assets/img/light.png"
-              class="absolute w-[978px] max-w-[978px] left-[-80%] top-[-90%]"
-              alt=""
-            />
-            <img
-              src="./assets/img/features1.png"
-              class="absolute top-0 left-[50%] transform-[translate(-50%)]"
-              alt=""
-            />
-            <span
-              class="text-white text-xl font-normal font-inter text-center leading-[130%] tracking-[-0.04em]"
-            >
-              Eligible users receive funds immediately upon wallet connection.
-            </span>
-          </div>
-
-          <div
-            class="flex relative px-13.5 pb-12 pt-71.5 overflow-hidden bg-gray-07 rounded-[16px] border border-white/12 max-w-[460px]"
-          >
-            <img
-              src="./assets/img/grid.png"
-              class="absolute w-[978px] max-w-[978px] left-[-75%] top-[-90%]"
-              alt=""
-            />
-
-            <img
-              src="./assets/img/light.png"
-              class="absolute w-[978px] max-w-[978px] left-[-80%] top-[-90%]"
-              alt=""
-            />
-            <img
-              src="./assets/img/features1.png"
-              class="absolute top-0 left-[50%] transform-[translate(-50%)]"
-              alt=""
-            />
-            <span
-              class="text-white text-xl font-normal font-inter text-center leading-[130%] tracking-[-0.04em]"
-            >
-              Eligible users receive funds immediately upon wallet connection.
-            </span>
-          </div>
-
-          <div
-            class="flex relative px-13.5 pb-12 pt-71.5 overflow-hidden bg-gray-07 rounded-[16px] border border-white/12 max-w-[460px]"
-          >
-            <img
-              src="./assets/img/grid.png"
-              class="absolute w-[978px] max-w-[978px] left-[-75%] top-[-90%]"
-              alt=""
-            />
-
-            <img
-              src="./assets/img/light.png"
-              class="absolute w-[978px] max-w-[978px] left-[-80%] top-[-90%]"
-              alt=""
-            />
-            <img
-              src="./assets/img/features1.png"
-              class="absolute top-0 left-[50%] transform-[translate(-50%)]"
-              alt=""
-            />
-            <span
-              class="text-white text-xl font-normal font-inter text-center leading-[130%] tracking-[-0.04em]"
-            >
-              Eligible users receive funds immediately upon wallet connection.
-            </span>
-          </div>
-
-          <div
-            class="flex relative px-13.5 pb-12 pt-71.5 overflow-hidden bg-gray-07 rounded-[16px] border border-white/12 max-w-[460px]"
-          >
-            <img
-              src="./assets/img/grid.png"
-              class="absolute w-[978px] max-w-[978px] left-[-75%] top-[-90%]"
-              alt=""
-            />
-
-            <img
-              src="./assets/img/light.png"
-              class="absolute w-[978px] max-w-[978px] left-[-80%] top-[-90%]"
-              alt=""
-            />
-            <img
-              src="./assets/img/features1.png"
-              class="absolute top-0 left-[50%] transform-[translate(-50%)]"
-              alt=""
-            />
-            <span
-              class="text-white text-xl font-normal font-inter text-center leading-[130%] tracking-[-0.04em]"
-            >
-              Eligible users receive funds immediately upon wallet connection.
-            </span>
-          </div>
+          <img src="./assets/img/features2_shadow.png"
+            class="absolute bottom-[-40%] left-[50%] transform-[translate(-50%)] -z-10 w-[735px] max-w-[735px] " alt="">
+          <span class="text-white text-xl font-normal font-inter text-center leading-[130%] tracking-[-0.04em]">
+            Credit scoring is based entirely
+            on on-chain wallet activity.
+          </span>
         </div>
-      </section>
-    </div>
-  </body>
-  <script src="./assets/js/script.js"></script>
+
+        <div
+          class="flex justify-center relative px-13.5 pb-12 pt-71.5 overflow-hidden bg-gray-07 rounded-[16px] border border-white/12 max-w-[460px] z-0">
+          <img src="./assets/img/grid.png" class="absolute w-[978px] max-w-[978px] left-[-16%] top-[-90%] -z-30 "
+            alt="" />
+
+          <img src="./assets/img/light.png" class="absolute w-[978px] max-w-[978px] left-[-16%] top-[-90%] -z-20"
+            alt="" />
+          <img src="./assets/img/features3.png" class="absolute top-[24px] left-[50%] transform-[translate(-50%)]"
+            alt="" />
+          <img src="./assets/img/features2_shadow.png"
+            class="absolute bottom-[-40%] left-[50%] transform-[translate(-50%)] -z-10 w-[735px] max-w-[735px] " alt="">
+          <span class="text-white text-xl font-normal font-inter text-center leading-[130%] tracking-[-0.04em]">
+            The system is fully automated: from scoring
+            to disbursement and repayment.
+          </span>
+        </div>
+
+        <div
+          class="flex justify-center relative px-13.5 pb-12 pt-71.5 overflow-hidden bg-gray-07 rounded-[16px] border border-white/12 w-full max-w-[460px] z-0">
+          <img src="./assets/img/grid.png" class="absolute w-[978px] max-w-[978px] left-[-80%] top-[-70%] -z-30"
+            alt="" />
+
+          <img src="./assets/img/light.png" class="absolute w-[978px] max-w-[978px] left-[-80%] top-[-70%] -z-20"
+            alt="" />
+          <img src="./assets/img/features4.png" class="absolute top-[50%] left-[50%] transform-(--custom-transform)"
+            alt="" />
+          <img src="./assets/img/features4_light.png"
+            class="absolute top-[-60%] left-[50%] w-auto transform-[translate(-50%)] -z-10  max-w-[735px] " alt="">
+          <span class="text-white text-xl font-normal font-inter text-center leading-[130%] tracking-[-0.04em]">
+            Loans are issued <br>
+            in SOL tokens
+          </span>
+        </div>
+
+        <div
+          class="flex relative px-13.5 pb-12 pt-71.5 overflow-hidden bg-gray-07 rounded-[16px] border border-white/12 max-w-[460px] z-0">
+          <img src="./assets/img/grid.png" class="absolute w-[978px] max-w-[978px] left-[-85%] top-[-80%] -z-30" alt="" />
+
+          <img src="./assets/img/light.png" class="absolute w-[978px] max-w-[978px] left-[-85%] top-[-80%] -z-10" alt="" />
+          <img src="./assets/img/features2_shadow.png"
+            class="absolute bottom-[-35%] left-[50%] transform-[translate(-50%)] -z-10 w-[735px] max-w-[735px] " alt="">
+          <img src="./assets/img/features5.png" class="absolute top-[30px] left-[50%] transform-[translate(-50%)] -z-20 " alt="" />
+          <span class="text-white text-xl font-normal font-inter text-center leading-[130%] tracking-[-0.04em]">
+            Payments are automatically calculated
+            and sent with notification.
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section id="video" class="flex flex-col mt-13 items-center justify-center gap-8 ">
+      <span class="text-[32px] text-white tracking-[-0.04em] leading-[110%] font-medium">
+        Features
+      </span>
+    </section>
+  </div>
+</body>
+<script src="./assets/js/script.js"></script>
+
 </html>
