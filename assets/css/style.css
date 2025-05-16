@@ -1150,7 +1150,7 @@
   right: -1px;
   left: -1px;
   bottom: -1px;
-  background: linear-gradient(to bottom, rgba(223, 205, 245, 1) 0%, rgba(135, 83, 198, 1) 100%);
+  background: linear-gradient( to bottom, rgba(223, 205, 245, 1) 0%, rgba(135, 83, 198, 1) 100% );
   border-radius: 12px;
   position: absolute;
   z-index: -1;
@@ -1187,7 +1187,7 @@
 .features_logo_block path {
   box-shadow: inset 0px 4px 24px rgb(255, 255, 255, 0.5);
 }
-.active>div>svg>path {
+.active > div > svg > path {
   stroke-opacity: 1;
 }
 .rotateCustom {
@@ -1195,28 +1195,19 @@
   right: 60px;
   top: -90px;
   transform: rotate3d(-2, 1, 1, 43deg);
+  animation: scroll-top 10s linear infinite;
 }
-.scroll-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 344px;
+.rotateCustom:last-child {
+  top: -207px;
+  right: 253px;
 }
-.scroll-track {
-  display: flex;
-  width: calc(2 * 100%);
-  animation: scroll-left 20s linear infinite;
-}
-@keyframes scroll-left {
-  from {
-    transform: translateX(0);
+@keyframes scroll-top {
+  0% {
+    transform: rotate3d(-2, 1, 1, 43deg) translateY(0);
   }
-  to {
-    transform: translateX(-50%);
+  100% {
+    transform: rotate3d(-2, 1, 1, 43deg) translateY(-50%);
   }
-}
-.scroll-item {
-  flex-shrink: 0;
 }
 @property --tw-rotate-x {
   syntax: "*";

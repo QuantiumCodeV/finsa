@@ -42,9 +42,11 @@
   right: -1px;
   left: -1px;
   bottom: -1px;
-  background: linear-gradient(to bottom,
-      rgba(223, 205, 245, 1) 0%,
-      rgba(135, 83, 198, 1) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(223, 205, 245, 1) 0%,
+    rgba(135, 83, 198, 1) 100%
+  );
   border-radius: 12px;
 
   position: absolute;
@@ -85,12 +87,11 @@
   box-shadow: 0 6px 16px rgba(147, 86, 220, 0.4);
 }
 
-
 .features_logo_block path {
   box-shadow: inset 0px 4px 24px rgb(255, 255, 255, 0.5);
 }
 
-.active>div>svg>path {
+.active > div > svg > path {
   stroke-opacity: 1;
 }
 
@@ -99,38 +100,18 @@
   right: 60px;
   top: -90px;
   transform: rotate3d(-2, 1, 1, 43deg);
+  animation: scroll-top 10s linear infinite;
+}
+.rotateCustom:last-child {
+  top: -207px;
+  right: 253px;
 }
 
-/* Контейнер для скролла */
-.scroll-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  /* или фиксированная ширина */
-  height: 344px;
-  /* высота вашего блока */
-}
-
-/* Обертка для ленты */
-.scroll-track {
-  display: flex;
-  width: calc(2 * 100%);
-  /* ширина двух копий содержимого */
-  animation: scroll-left 20s linear infinite;
-}
-
-/* Анимация скролла влево */
-@keyframes scroll-left {
-  from {
-    transform: translateX(0);
+@keyframes scroll-top {
+  0% {
+    transform: rotate3d(-2, 1, 1, 43deg) translateY(0);
   }
-
-  to {
-    transform: translateX(-50%);
+  100% {
+    transform: rotate3d(-2, 1, 1, 43deg) translateY(-50%);
   }
-}
-
-/* Стиль для содержимого, которое повторяется */
-.scroll-item {
-  flex-shrink: 0;
 }
