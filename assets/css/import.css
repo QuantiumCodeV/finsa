@@ -13,9 +13,12 @@
   --color-gray-04: rgba(4, 4, 4, 1);
   --color-gray-06: rgba(6, 4, 7, 1);
 
+  --breakpoint-1440px: 1440px;
+
   --font-inter: "Inter", sans-serif;
 
-  --custom-transform: translate(-50%, -50%); 
+  --custom-transform: translate(-50%, -50%);
+  --logo-transform: rotateY(180deg) rotateZ(26deg);
 }
 
 * {
@@ -39,11 +42,9 @@
   right: -1px;
   left: -1px;
   bottom: -1px;
-  background: linear-gradient(
-    to bottom,
-    rgba(223, 205, 245, 1) 0%,
-    rgba(135, 83, 198, 1) 100%
-  );
+  background: linear-gradient(to bottom,
+      rgba(223, 205, 245, 1) 0%,
+      rgba(135, 83, 198, 1) 100%);
   border-radius: 12px;
 
   position: absolute;
@@ -84,3 +85,52 @@
   box-shadow: 0 6px 16px rgba(147, 86, 220, 0.4);
 }
 
+
+.features_logo_block path {
+  box-shadow: inset 0px 4px 24px rgb(255, 255, 255, 0.5);
+}
+
+.active>div>svg>path {
+  stroke-opacity: 1;
+}
+
+.rotateCustom {
+  position: relative;
+  right: 60px;
+  top: -90px;
+  transform: rotate3d(-2, 1, 1, 43deg);
+}
+
+/* Контейнер для скролла */
+.scroll-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  /* или фиксированная ширина */
+  height: 344px;
+  /* высота вашего блока */
+}
+
+/* Обертка для ленты */
+.scroll-track {
+  display: flex;
+  width: calc(2 * 100%);
+  /* ширина двух копий содержимого */
+  animation: scroll-left 20s linear infinite;
+}
+
+/* Анимация скролла влево */
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Стиль для содержимого, которое повторяется */
+.scroll-item {
+  flex-shrink: 0;
+}
