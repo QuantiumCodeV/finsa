@@ -35,13 +35,24 @@ document.addEventListener("click", function (e) {
     }, 500);
   }
 });
-/*
+
 $(document).ready(function () {
-  $("#faq > div:first-child").click(function () {
-    $(this).next("#faq > div:last-child").slideToggle();
+  // Обработчик клика по каждому блоку FAQ
+  $("#faqList > .flex").click(function () {
+    const parent = $(this); // текущий блок FAQ
+    const answerContainer = parent.find(".flex.hidden"); // блок с ответом
+
+    if (parent.hasClass("active")) {
+      // Если активен — закрываем
+      answerContainer.slideUp(300);
+      parent.removeClass("active");
+    } else {
+      // Если не активен — открываем
+      answerContainer.slideDown(300);
+      parent.addClass("active");
+    }
   });
 });
-*/
 document.addEventListener("DOMContentLoaded", function () {
   // Находим все якорные ссылки
   const anchorLinks = document.querySelectorAll('a[href^="#"]');

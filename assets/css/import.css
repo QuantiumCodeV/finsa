@@ -21,6 +21,18 @@
   --logo-transform: rotateY(180deg) rotateZ(26deg);
 }
 
+::selection {
+  background-color: #8a2bff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #8a2bff;
+}
+
 * {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
@@ -114,4 +126,48 @@
   100% {
     transform: rotate3d(-2, 1, 1, 43deg) translateY(-50%);
   }
+}
+
+.loader {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  position: fixed;
+  display: flex;
+  transition: opacity 0.5s ease-in-out;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+.loader_image {
+  width: 50px;
+  height: 50px;
+  animation: pulse 2s infinite ease-in-out;
+  filter: drop-shadow(0 0 8px #8a2bff);
+  transition: transform 0.8s ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 1px #8a2bff) brightness(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 5px #8a2bffbf) brightness(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 1px #8a2bff) brightness(1);
+  }
+}
+
+.loader.fade-out {
+  opacity: 0;
+  pointer-events: none;
 }
