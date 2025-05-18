@@ -171,3 +171,9 @@
   opacity: 0;
   pointer-events: none;
 }
+
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+  animation-direction: reverse;
+}
